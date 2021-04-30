@@ -1,0 +1,5 @@
+
+<!-- To build the aar file: Click on module, select Build > Rebuild APK (note: Build APK is not sufficient!)-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.thkoeln.cvogt.android.propanim_utilities" />

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.thkoeln.cvogt.android.propanimutil_demos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_thk_android"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_thk_android"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DemoPropAnimUtils_Specials"></activity>
+        <activity android:name=".DemoPropAnimUtils_Intro" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DemoPropAnimUtils_Basics" />
+        <activity android:name=".DemoPropAnimUtils_Bezierpath" />
+        <activity android:name=".DemoPropAnimUtils_TimeInterpolators" />
+        <activity android:name=".DemoPropAnimUtils_Animatorsequence" />
+        <activity android:name=".DemoPropAnimUtils_ArcCircleSpiralpath" />
+        <activity android:name=".DemoPropAnimUtils_RotInterpolFadeTrail" />
+        <activity android:name=".DemoPropAnimUtils_DrawablesViews" />
+        <activity android:name=".DemoPropAnimUtils_LayoutEmbedding" />
+        <activity android:name=".DemoPropAnimUtils_Reset" />
+        <activity android:name=".DemoPropAnimUtils_Groups1" />
+        <activity android:name=".DemoPropAnimUtils_Groups2" />
+        <activity android:name=".DemoPropAnimUtils_Texts" />
+        <activity android:name=".DemoPropAnimUtils_TouchGestures" />
+        <activity android:name=".DemoPropAnimUtils_Collision" />
+        <activity android:name=".DemoPropAnimUtils_LayerPathDrawables" />
+        <activity android:name=".DemoPropAnimUtils_DependentObjects" />
+        <activity android:name=".DemoPropAnimUtils_Trail" />
+        <activity android:name=".DemoPropAnimUtils_Graphs" />
+    </application>
+
+</manifest>
