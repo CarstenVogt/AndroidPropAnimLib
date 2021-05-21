@@ -1,11 +1,11 @@
-Bibliothek erzeugen:
+These libraries provide utitilies for programming with the Android property animation technique. They can be included in an Android Studio project by these steps:
 
-In Android Studio links das Projekt "propanim_utilities" markieren.
-Dann Build > Rebuild Project  (Achtung: Build Project funktioniert nicht)
+1.) Include jitpack.io in build.gradle (Project):
 
-> Bibliothek entsteht als "build/outputs/aar/propanim_utilities-debug.aar"
+allprojects { repositories { ... maven { url 'https://jitpack.io' } } }
 
-> vor Weitergabe umbenennen in "propanim_utilities_cv.aar"
+2.) Specify a dependency on these libraries in build.gradle (Module):
 
+dependencies { implementation 'com.github.CarstenVogt:AndroidPropAnimLib:..release number here..' ... }
 
 
