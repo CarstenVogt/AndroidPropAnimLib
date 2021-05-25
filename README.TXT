@@ -1,8 +1,8 @@
 These libraries provide utitilies for programming with the Android property animation technique. A detailed explanation can be found here:
 
 - YouTube Video 1 Overview: https://youtu.be/RYjBFQDCfPQ
-- YouTube Video 2 Code:     https://www.youtube.com/watch?v=HTr16eRqq60
-- YouTube Video 3 Demo:     https://www.youtube.com/watch?v=oHWNgBJRwCg
+- YouTube Video 2 Code:     https://youtu.be/HTr16eRqq60
+- YouTube Video 3 Demo:     https://youtu.be/oHWNgBJRwCg
 
 - JavaDoc: http://www.nt.th-koeln.de/vogt/vma/javadoc/propanimlib/de/thkoeln/cvogt/android/propanim_utilities/package-summary.html
            http://www.nt.th-koeln.de/vogt/vma/javadoc/propanimlib/de/thkoeln/cvogt/android/propanim_utilities/AnimatedGuiObjectCV.html
