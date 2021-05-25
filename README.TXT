@@ -1,6 +1,6 @@
 These libraries provide utitilies for programming with the Android property animation technique. A detailed explanation can be found here:
 
-- YouTube Video 1 Overview: https://www.youtube.com/watch?v=pZEYgbSulok
+- YouTube Video 1 Overview: https://youtu.be/RYjBFQDCfPQ
 - YouTube Video 2 Code:     https://www.youtube.com/watch?v=HTr16eRqq60
 - YouTube Video 3 Demo:     https://www.youtube.com/watch?v=oHWNgBJRwCg
 
