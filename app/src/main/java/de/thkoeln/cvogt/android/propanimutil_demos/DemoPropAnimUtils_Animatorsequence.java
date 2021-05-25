@@ -1,3 +1,20 @@
+/* This work is provided under GPLv3, the GNU General Public License 3
+   http://www.gnu.org/licenses/gpl-3.0.html */
+
+/**
+ * The app demonstrates the functionality and the usage of the
+ * package de.thkoeln.cvogt.android.propanim_utilities
+ * which provides utility classes for the Android property animation technique.
+ * For details, please watch the introductory videos
+ * and read the comments for the classes AnimatedGuiObjectCV and AnimationViewCV.
+
+ Prof. Dr. Carsten Vogt
+ Technische Hochschule Köln, Germany
+ Fakultät für Informations-, Medien- und Elektrotechnik
+ carsten.vogt@th-koeln.de
+ 3.5.2021
+
+ */
 package de.thkoeln.cvogt.android.propanimutil_demos;
 
 import android.animation.Animator;
@@ -7,8 +24,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import de.thkoeln.cvogt.android.propanim_utilities.*;
-
 import de.thkoeln.cvogt.android.propanim_utilities.*;
 
 public class DemoPropAnimUtils_Animatorsequence extends Activity {

@@ -17,20 +17,29 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 
-/**
- * Created by vogt on 5.1.2018.
- */
-
 /** ViewGroup class to display animated objects of class AnimatedGuiObjectCV (i.e. animated Drawable and View objects) with.<BR>
  * For more comments on how to proceed, see the documentation of the class AnimatedGuiObjectCV.<BR><BR>
  * N.B.: Views of this class can currently not be embedded in a layout together with other views.
  * Neither can this class be referenced in an XML layout file.
  * You must therefore generate an object of this class in the Java code of an activity by calling the constructor
  * specified below and then display the object fullscreen by passing it as a parameter to setContentView().
- * <BR><BR>
- * Author: Prof. Dr. Carsten Vogt, Technische Hochschule Koeln / University of Applied Sciences Cologne, Germany, carsten.vogt@th-koeln.de
- * Version: 1.0
- */
+ * <P>
+ *  A video explanation is given here:
+ *  <A HREF="https://youtu.be/RYjBFQDCfPQ"> Overview</A>,
+ *  <A HREF="https://youtu.be/HTr16eRqq60"> Code</A>,
+ *  <A HREF="https://youtu.be/oHWNgBJRwCg"> Demo</A>
+ * <P>
+ * The code in the companion package <I>de.thkoeln.cvogt.android.propanimutil_demos</I> demonstrates how to use this class.
+ <BR><HR><BR>
+ This work is provided by
+ Prof. Dr. Carsten Vogt, Technische Hochschule K&ouml;ln, Fakult&auml;t f&uuml;r Informations-, Medien- und Elektrotechnik, Germany
+ <P>
+ under GPLv3, the GNU General Public License 3,
+ <A HREF="http://www.gnu.org/licenses/gpl-3.0.html">http://www.gnu.org/licenses/gpl-3.0.html</A>.
+ *
+ * @see AnimatedGuiObjectCV
+ * @see de.thkoeln.cvogt.android.propanimutil_demos
+*/
 
 public class AnimationViewCV extends RelativeLayout {
 

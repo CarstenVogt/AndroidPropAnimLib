@@ -1,39 +1,17 @@
 package de.thkoeln.cvogt.android.propanimutil_demos;
 
 import android.app.ListActivity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
+import android.content.*;
+import android.content.res.*;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.MediaController;
-import android.widget.PopupWindow;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.VideoView;
-
-/**
- * Created by vogt on 25.07.2019.
- */
-
-/**
- * This app demonstrates the functionality and the usage of some utility classes for Android property animation.
- * For details, please read the comments for classes AnimatedGuiObjectCV and AnimationViewCV.
- */
+import android.view.*;
+import android.widget.*;
 
 public class MainActivity extends ListActivity {
 
-    String[] choices = { "Introduction", "Basic Shapes & Paths", "Texts", "Arc / Circle / Elliptic / Spiral Path",
+    String[] choices = { "Video Introduction", "Basic Shapes & Paths", "Texts", "Arc / Circle / Elliptic / Spiral Path",
             "Bezier Path", "Rotation, Time Interpolators, Fading, Trails", "Lines & Borders",
             "Animator Sequence", "Touch Events & Gestures", "Graphs",
             "Collision & Proximity", "Drawables & Views", "Layer Drawables & Path Shapes", "Groups: Paths, Alignment, Distribution", "Groups: Zoom, Rotation, Ellipse, Area",
@@ -52,7 +30,7 @@ public class MainActivity extends ListActivity {
     protected void onListItemClick(ListView liste, View datenElement, int position, long id) {
         super.onListItemClick(liste, datenElement, position, id);
         String auswahl = ((TextView)datenElement).getText().toString();
-        if (auswahl.equals("Introduction"))
+        if (auswahl.equals("Video Introduction"))
             startActivity (new Intent(this, DemoPropAnimUtils_Intro.class));
         if (auswahl.equals("Basic Shapes & Paths"))
             startActivity (new Intent(this, DemoPropAnimUtils_Basics.class));
@@ -93,7 +71,7 @@ public class MainActivity extends ListActivity {
     /** Popup window to display a video.
      */
 
-    public static class VideooutputPopup extends PopupWindow {
+    private static class VideooutputPopup extends PopupWindow {
 
         LinearLayout layout;
         Context context;
@@ -185,7 +163,7 @@ public class MainActivity extends ListActivity {
 
     }
 
-    public static void showBigToast(Context context, String text, int gravity) {
+    private static void showBigToast(Context context, String text, int gravity) {
         Toast toast = Toast.makeText(context,text,Toast.LENGTH_SHORT);
         ViewGroup toastView = (ViewGroup)toast.getView();
         TextView tv = (TextView)toastView.getChildAt(0);
@@ -193,7 +171,5 @@ public class MainActivity extends ListActivity {
         toast.setGravity(gravity,0,0);
         toast.show();
     }
-
-
 
 }

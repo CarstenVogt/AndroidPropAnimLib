@@ -4,12 +4,14 @@ import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import de.thkoeln.cvogt.android.propanim_utilities.*;
@@ -38,6 +40,7 @@ public class DemoPropAnimUtils_ArcCircleSpiralpath extends Activity {
             demo2();
         if (item.getItemId()==R.id.menuItemDemo3)
             demo3();
+            // demo3_landscape();
         if (item.getItemId()==R.id.menuItemDemo4)
             demo4();
         return true;
@@ -167,7 +170,7 @@ public class DemoPropAnimUtils_ArcCircleSpiralpath extends Activity {
         for (int i=0;i<numberOfObjects;i++) {
             AnimatedGuiObjectCV kreis = new AnimatedGuiObjectCV(AnimatedGuiObjectCV.TYPE_DRAWABLE_CIRCLE, "CIRCLE"+i, Color.BLACK, startpoints[i].x, startpoints[i].y, radiusObject);
             if (i<numberOfObjects/2) kreis.setZindex(1);
-             else kreis.setZindex(3);
+            else kreis.setZindex(3);
             kreis.addEllipseAnimator(centerX,centerY,radiusEllipse,comprFactorEllipse,rotAngleEllipse,true,new LinearInterpolator(),roundDuration,1000);
             if (i<numberOfObjects/2) {
                 kreis.setZindex(1);
@@ -197,6 +200,62 @@ public class DemoPropAnimUtils_ArcCircleSpiralpath extends Activity {
             view.addAnimatedGuiObject(kreis);
         }
         */
+        setContentView(view);
+        view.startAnimations();
+    }
+
+    private void demo3_landscape() {
+        AnimationViewCV view = new AnimationViewCV(this);
+        int screenheight = GUIUtilitiesCV.getDisplayHeight();
+        int screenwidth = GUIUtilitiesCV.getDisplayWidth();
+        int centerX = screenwidth/2;
+        int centerY = screenheight/2-100;
+        int numberOfObjects = 30;
+        int roundDuration = 8000;
+        int radiusObject = 50;
+        int radiusCenter = 600;
+        int radiusEllipse = screenwidth/2-200;
+        double comprFactorEllipse = 0.2;
+        double rotAngleEllipse = Math.PI/8;
+        int[] colors = { Color.RED, Color.MAGENTA, Color.BLUE, Color.CYAN, Color.GREEN, Color.YELLOW, Color.DKGRAY, Color.BLACK};
+        AnimatedGuiObjectCV kreisBackground = new AnimatedGuiObjectCV(AnimatedGuiObjectCV.TYPE_DRAWABLE_CIRCLE,"CIRCLE", Color.LTGRAY,centerX,centerY,radiusCenter);
+        kreisBackground.setZindex(2);
+        view.addAnimatedGuiObject(kreisBackground);
+        Point[] startpoints = GraphicsUtilsCV.pointsOnEllipse(centerX,centerY,radiusEllipse,comprFactorEllipse,rotAngleEllipse,numberOfObjects);
+        for (int i=0;i<numberOfObjects;i++) {
+            AnimatedGuiObjectCV kreis = new AnimatedGuiObjectCV(AnimatedGuiObjectCV.TYPE_DRAWABLE_CIRCLE, "CIRCLE"+i, Color.RED, startpoints[i].x, startpoints[i].y, radiusObject);
+            kreis.addEllipseAnimator(centerX,centerY,radiusEllipse,comprFactorEllipse,rotAngleEllipse,true,new LinearInterpolator(),roundDuration,1000);
+            if (i<numberOfObjects/2) {
+                kreis.setZindex(1);
+                Animator anim = kreis.addZAnimator(3,1,roundDuration/2,roundDuration/2,1000+(i*roundDuration)/numberOfObjects);
+                ((ObjectAnimator)anim).setRepeatCount(ValueAnimator.INFINITE);
+            }
+            else {
+                kreis.setZindex(3);
+                Animator anim = kreis.addZAnimator(1,3,roundDuration/2,roundDuration/2,1000+((i-numberOfObjects/2)*roundDuration)/numberOfObjects);
+                ((ObjectAnimator)anim).setRepeatCount(ValueAnimator.INFINITE);
+            }
+            view.addAnimatedGuiObject(kreis);
+        }
+        rotAngleEllipse = -Math.PI/8;
+        startpoints = GraphicsUtilsCV.pointsOnEllipse(centerX,centerY,radiusEllipse,comprFactorEllipse,rotAngleEllipse,numberOfObjects);
+        for (int i=0;i<numberOfObjects;i++) {
+            AnimatedGuiObjectCV kreis = new AnimatedGuiObjectCV(AnimatedGuiObjectCV.TYPE_DRAWABLE_CIRCLE, "CIRCLE"+i, Color.BLACK, startpoints[i].x, startpoints[i].y, radiusObject);
+            if (i<numberOfObjects/2) kreis.setZindex(1);
+            else kreis.setZindex(3);
+            kreis.addEllipseAnimator(centerX,centerY,radiusEllipse,comprFactorEllipse,rotAngleEllipse,true,new LinearInterpolator(),roundDuration,1000);
+            if (i<numberOfObjects/2) {
+                kreis.setZindex(1);
+                Animator anim = kreis.addZAnimator(3,1,roundDuration/2,roundDuration/2,1000+(i*roundDuration)/numberOfObjects);
+                ((ObjectAnimator)anim).setRepeatCount(ValueAnimator.INFINITE);
+            }
+            else {
+                kreis.setZindex(3);
+                Animator anim = kreis.addZAnimator(1,3,roundDuration/2,roundDuration/2,1000+((i-numberOfObjects/2)*roundDuration)/numberOfObjects);
+                ((ObjectAnimator)anim).setRepeatCount(ValueAnimator.INFINITE);
+            }
+            view.addAnimatedGuiObject(kreis);
+        }
         setContentView(view);
         view.startAnimations();
     }

@@ -3,6 +3,7 @@ package de.thkoeln.cvogt.android.propanimutil_demos;
 import android.animation.Animator;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -113,6 +114,7 @@ public class DemoPropAnimUtils_Intro extends Activity {
         background2.setZindex(2);
 */
         // buttons
+        int delay_videobuttons = 1500;
         Button b1 = new Button(this);
         b1.setWidth(buttonWidth);
         b1.setHeight(buttonHeight);
@@ -123,11 +125,12 @@ public class DemoPropAnimUtils_Intro extends Activity {
             @Override
             public void onClick(View view) {
                 // Toast.makeText(DemoPropAnimUtils_Intro.this,"Not yet available",Toast.LENGTH_LONG).show();
-                (new VideooutputPopup(DemoPropAnimUtils_Intro.this,"http://www.nt.th-koeln.de/vogt/vma/videos/UtilitiesPropAnimCV_1_480.mp4")).show();
+                // (new VideooutputPopup(DemoPropAnimUtils_Intro.this,"http://www.nt.th-koeln.de/vogt/vma/videos/UtilitiesPropAnimCV_1_480.mp4")).show();
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/RYjBFQDCfPQ")));
             }
         });
-        final AnimatedGuiObjectCV<View> buttonVideo1 = new AnimatedGuiObjectCV<View>(b1, "BUTTONVIDEO", -150, -250);
-        buttonVideo1.addBezierPathAnimator(screenwidth+400,400,-400,screenheight+300,screenwidth/2-130, 3*screenheight/4, duration, delay);
+        final AnimatedGuiObjectCV<View> buttonVideo1 = new AnimatedGuiObjectCV<View>(b1, "BUTTONVIDEO1", -150, -250);
+        buttonVideo1.addBezierPathAnimator(screenwidth+400,400,-400,screenheight+300,screenwidth/2-130, 3*screenheight/4, duration, delay_videobuttons);
         // buttonVideo.addLinearPathAnimator(screenwidth/2+100, screenheight/2+100, duration, delay);
         buttonVideo1.setZindex(3);
         view.addAnimatedGuiObject(buttonVideo1);
@@ -141,11 +144,12 @@ public class DemoPropAnimUtils_Intro extends Activity {
             @Override
             public void onClick(View view) {
                 // Toast.makeText(DemoPropAnimUtils_Intro.this,"Not yet available",Toast.LENGTH_LONG).show();
-                (new VideooutputPopup(DemoPropAnimUtils_Intro.this,"http://www.nt.th-koeln.de/vogt/vma/videos/UtilitiesPropAnimCV_2_720.mp4")).show();
+                // (new VideooutputPopup(DemoPropAnimUtils_Intro.this,"http://www.nt.th-koeln.de/vogt/vma/videos/UtilitiesPropAnimCV_2_720.mp4")).show();
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/HTr16eRqq60")));
             }
         });
-        final AnimatedGuiObjectCV<View> buttonVideo2 = new AnimatedGuiObjectCV<View>(b2, "BUTTONVIDEO", -150, -250);
-        buttonVideo2.addBezierPathAnimator(screenwidth+400,400,-400,screenheight+300,screenwidth/2+130, 3*screenheight/4, duration, delay);
+        final AnimatedGuiObjectCV<View> buttonVideo2 = new AnimatedGuiObjectCV<View>(b2, "BUTTONVIDEO2", -150, -250);
+        buttonVideo2.addBezierPathAnimator(screenwidth+400,400,-400,screenheight+300,screenwidth/2+130, 3*screenheight/4, duration, delay_videobuttons);
         // buttonVideo.addLinearPathAnimator(screenwidth/2+100, screenheight/2+100, duration, delay);
         buttonVideo2.setZindex(3);
         view.addAnimatedGuiObject(buttonVideo2);
@@ -159,11 +163,12 @@ public class DemoPropAnimUtils_Intro extends Activity {
             @Override
             public void onClick(View view) {
                 // Toast.makeText(DemoPropAnimUtils_Intro.this,"Not yet available",Toast.LENGTH_LONG).show();
-                (new VideooutputPopup(DemoPropAnimUtils_Intro.this,"http://www.nt.th-koeln.de/vogt/vma/videos/UtilitiesPropAnimCV_3_480.mp4",true)).show();
+                // (new VideooutputPopup(DemoPropAnimUtils_Intro.this,"http://www.nt.th-koeln.de/vogt/vma/videos/UtilitiesPropAnimCV_3_480.mp4",true)).show();
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/oHWNgBJRwCg")));
             }
         });
-        final AnimatedGuiObjectCV<View> buttonVideo3 = new AnimatedGuiObjectCV<View>(b3, "BUTTONVIDEO", -150, -250);
-        buttonVideo3.addBezierPathAnimator(screenwidth+400,400,-400,screenheight+300,screenwidth/2+390, 3*screenheight/4, duration, delay);
+        final AnimatedGuiObjectCV<View> buttonVideo3 = new AnimatedGuiObjectCV<View>(b3, "BUTTONVIDEO3", -150, -250);
+        buttonVideo3.addBezierPathAnimator(screenwidth+400,400,-400,screenheight+300,screenwidth/2+390, 3*screenheight/4, duration, delay_videobuttons);
         // buttonVideo.addLinearPathAnimator(screenwidth/2+100, screenheight/2+100, duration, delay);
         buttonVideo3.setZindex(3);
         view.addAnimatedGuiObject(buttonVideo3);

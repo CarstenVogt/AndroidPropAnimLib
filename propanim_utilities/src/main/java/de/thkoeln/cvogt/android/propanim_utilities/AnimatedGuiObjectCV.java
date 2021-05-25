@@ -40,9 +40,13 @@ import java.util.Iterator;
 // TODO: make it embeddable for XML layout files
 // (> define attributes in res/values/attrs.xml)
 
-/**
- * Created by vogt on 6.1.2018.
- */
+// Bibliothek erzeugen:
+// In Android Studio links das Projekt "propanim_utilities" markieren.
+// Dann Build > Rebuild Project  (Achtung: Build Project funktioniert nicht)
+// > Bibliothek entsteht als "build/outputs/aar/propanim_utilities-debug.aar"
+// > vor Weitergabe umbenennen in "propanim_utilities_cv.aar"
+
+// alternativ: Export nach GitHub > Erklärung siehe in Datei GithubExportImport.doc
 
 /** Adapter class for animating objects of class Drawable or class View by applying the property animation techniques of Android.
  * An object of this adapter class wraps an object that can be displayed and animated on the screen by a ViewGroup object of class AnimationViewCV.
@@ -68,11 +72,23 @@ import java.util.Iterator;
  * To delete it, add a listener to the animator: animator.addListener(new AnimationUtilsCV.EndListener_DeleteIfNotVisible(myGuiObject)).
  * Also note: When an animator has been started (by calling startAnimation on guiObject) and has afterwards
  * finished its execution, it will be automatically removed from the object's animator list and therefore can (and will) not be restarted.
- * <BR><BR>
- * Author: Prof. Dr. Carsten Vogt, Technische Hochschule Koeln / University of Applied Sciences Cologne, Germany, carsten.vogt@th-koeln.de
- * Version: 1.0
+ * <P>
+ *  A video explanation is given here:
+ *  <A HREF="https://youtu.be/RYjBFQDCfPQ"> Overview</A>,
+ *  <A HREF="https://youtu.be/HTr16eRqq60"> Code</A>,
+ *  <A HREF="https://youtu.be/oHWNgBJRwCg"> Demo</A>
+ * <P>
+ * The code in the companion package <I>de.thkoeln.cvogt.android.propanimutil_demos</I> demonstrates how to use this class.
+ <BR><HR><BR>
+ This work is provided by
+ Prof. Dr. Carsten Vogt, Technische Hochschule K&ouml;ln, Fakult&auml;t f&uuml;r Informations-, Medien- und Elektrotechnik, Germany
+ <P>
+ under GPLv3, the GNU General Public License 3,
+ <A HREF="http://www.gnu.org/licenses/gpl-3.0.html">http://www.gnu.org/licenses/gpl-3.0.html</A>.
  *
  * @param <T> The class of the object to be animated - either Drawable or View
+ * @see AnimationViewCV
+ * @see de.thkoeln.cvogt.android.propanimutil_demos
  *
  */
 
