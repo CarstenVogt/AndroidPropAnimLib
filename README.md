@@ -30,6 +30,6 @@ dependencies {
 
 The work is provided by Prof. Dr. Carsten Vogt, Technische Hochschule K&ouml;ln, Fakult&auml;t f&uuml;r Informations-, Medien- und Elektrotechnik, Germany
 under GPLv3, the GNU General Public License 3,
-http://www.gnu.org/licenses/gpl-3.0.html">http://www.gnu.org/licenses/gpl-3.0.html.
+http://www.gnu.org/licenses/gpl-3.0.html.
 
 
