@@ -8,7 +8,9 @@
  <A HREF="https://youtu.be/HTr16eRqq60"> Code</A>,
  <A HREF="https://youtu.be/oHWNgBJRwCg"> Demo</A>
  <P>
- and read the documentation of the classes <I>AnimatedGuiObjectCV</I> and <I>AnimationViewCV</I>.
+ and read the documentation of the classes <I>AnimatedGuiObjectCV</I> and <I>AnimationViewCV</I>
+ <P>
+ at <A HREF="https://github.com/CarstenVogt/AndroidPropAnimLib">https://github.com/CarstenVogt/AndroidPropAnimLib</A>.
  <BR><HR><BR>
  This work is provided by
  Prof. Dr. Carsten Vogt, Technische Hochschule K&ouml;ln, Fakult&auml;t f&uuml;r Informations-, Medien- und Elektrotechnik, Germany

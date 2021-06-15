@@ -2,10 +2,12 @@
    http://www.gnu.org/licenses/gpl-3.0.html */
 
 /**
+ * Reference: https://github.com/CarstenVogt/AndroidPropAnimLib
+ *
  * The app demonstrates the functionality and the usage of the
  * package de.thkoeln.cvogt.android.propanim_utilities
  * which provides utility classes for the Android property animation technique.
- * For details, please watch the introductory videos
+ * For details, please watch the introductory videos (see reference)
  * and read the comments for the classes AnimatedGuiObjectCV and AnimationViewCV.
 
  Prof. Dr. Carsten Vogt
@@ -15,6 +17,7 @@
  3.5.2021
 
  */
+
 package de.thkoeln.cvogt.android.propanimutil_demos;
 
 import android.animation.Animator;
