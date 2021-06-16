@@ -1,4 +1,6 @@
-This is a utility library to facilitate programming with the Android property animation technique (directory: propanim_utilities) together with a demo app that demonstrates the features of this library (directory: app). A detailed explanation can be found here:
+This is a utility library to facilitate programming with the Android property animation technique (directory: propanim_utilities) together with a demo app that demonstrates the features of this library (directory: app). The complete Android Studio project can be downloaded through the green button on top (code > download ZIP).
+
+A detailed explanation of the library can be found here:
 
 YouTube videos:
 - Part 1 Overview: https://youtu.be/RYjBFQDCfPQ
