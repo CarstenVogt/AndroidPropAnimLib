@@ -18,7 +18,6 @@ The library can be included in an Android Studion project by these steps:
 
 allprojects {
   repositories {
-     ...
      maven { url 'https://jitpack.io' }
   }
 }
