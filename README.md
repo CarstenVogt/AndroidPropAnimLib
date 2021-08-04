@@ -26,7 +26,7 @@ allprojects {
 2.) Specify a dependency on these libraries in build.gradle (Module):
 
 dependencies {
-  implementation 'com.github.CarstenVogt:UtilitiesTHK:...releasenumber...'
+  implementation 'com.github.CarstenVogt:AndroidPropAnimLib:...releasenumber...'
   ...
 }
 
