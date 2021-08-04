@@ -14,13 +14,13 @@ JavaDoc:
 
 The library can be included in an Android Studion project by these steps:
 
-1.) Include jitpack.io in build.gradle (Project):
+1.a) (Before Android Studio Arctic Fox / Gradle 7.0)
+Include jitpack.io in build.gradle (Project):
+allprojects { repositories { ... maven { url 'https://jitpack.io' } } }
 
-allprojects {
-  repositories {
-     maven { url 'https://jitpack.io' }
-  }
-}
+1.b) (For Android Studio Arctic Fox / Gradle 7.0)
+Include jitpack.io in settings.gradle:
+dependencyResolutionManagement { ... repositories { ... maven { url 'https://jitpack.io' } } }
 
 2.) Specify a dependency on these libraries in build.gradle (Module):
 
